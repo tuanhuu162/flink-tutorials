@@ -226,7 +226,7 @@ After you have [built](#Build) the project, run the application from a Flink Gat
 > **Note:** Don't forget to [set up your HDFS home directory](https://docs.cloudera.com/csa/1.2.0/installation/topics/csa-hdfs-home-install.html).
 
 ```
-flink run -ynm HeapMonitor target/flink-simple-tutorial-1.2-SNAPSHOT.jar
+flink run -ynm HeapMonitor target/flink-simple-tutorial-1.0-SNAPSHOT.jar
 ```
 
 > **Note:** Details about the `flink run` options can be found under the help. Execute: `flink run -h`
@@ -264,7 +264,7 @@ kafka-topics --create --partitions 16 --replication-factor 1 --zookeeper $(hostn
 
 Here is an example for the full command with Kafka logging:
 ```
-flink run -ynm HeapMonitor -yD logging.configuration.file=kafka-appender/log4j2.xml target/flink-simple-tutorial-1.2-SNAPSHOT.jar
+flink run -ynm HeapMonitor -yD logging.configuration.file=kafka-appender/log4j2.xml target/flink-simple-tutorial-1.0-SNAPSHOT.jar
 ```
 
 Then, accessing the logs from the Kafka topic will look like this:
@@ -291,7 +291,7 @@ On a cluster environment, it is more preferable to write the output to a durable
 
 By default, the output files will be stored under `hdfs:///tmp/flink-heap-stats`, but the output location is configurable with the `--output` parameter. The complete command that includes saving the output to HDFS and logging to Kafka looks like this:
 ```
-flink run -ynm HeapMonitor -yD logging.configuration.file=kafka-appender/log4j2.xml target/flink-simple-tutorial-1.2-SNAPSHOT.jar --cluster true
+flink run -ynm HeapMonitor -yD logging.configuration.file=kafka-appender/log4j2.xml target/flink-simple-tutorial-1.0-SNAPSHOT.jar --cluster true
 ```
 
 To inspect the output, you can call `hdfs` directly:
