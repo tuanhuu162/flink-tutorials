@@ -1,5 +1,8 @@
 # Tutorials for Flink on Cloudera
 
+> **WARNING**: This is a DataHub (Cloudera Public Cloud) release.
+> If you do not know what that means, you probably should check a simple CSA release instead.
+
 This repo contains reference Flink Streaming applications for a few example use-cases. These examples should serve as solid starting points when building production grade streaming applications as they include detailed development, configuration and deployment guidelines.
 We suggest to refer to them in the following order even though they are designed to be standalone references:
 
